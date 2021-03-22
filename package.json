@@ -1,0 +1,29 @@
+{
+  "name": "technisys-prime-numbers",
+  "version": "1.0.0",
+  "description": "NodeJs API (retrieve prime numbers)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/6CRISTIAN/technisys-prime-numbers.git"
+  },
+  "keywords": [
+    "nodejs",
+    "prime-numbers",
+    "express",
+    "simplet-unit-testing"
+  ],
+  "author": "Cristian Gómez github.com/6CRISTIAN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/6CRISTIAN/technisys-prime-numbers/issues"
+  },
+  "homepage": "https://github.com/6CRISTIAN/technisys-prime-numbers#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
