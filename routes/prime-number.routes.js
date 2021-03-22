@@ -1,22 +1,9 @@
 const express = require('express')
 const primeNumberRouter = express.Router()
 
-const { getPrimeNumbersByLimitNum } = require('../services/prime-number.service')
-const { defaultMsgErr } = require('../utils/constants');
+const { inputValidate } = require('../middleware/prime-number.middleware');
+const { primeNumberController } = require('../controller/prime-number.controller');
 
-primeNumberRouter.post('', async (req, res) => {
-   try {
-
-      const { limitNumber } = req.body
-      const primeNumbers = getPrimeNumbersByLimitNum(limitNumber);
-      res.status(200).json({ primeNumbers })
-
-   } catch (err) {
-
-      console.error(err)
-      res.status(err.code || 500).json({ message: err.message || defaultMsgErr })
-
-   }
-});
+primeNumberRouter.post('', inputValidate, primeNumberController);
 
 module.exports = { primeNumberRouter }
