@@ -4,7 +4,7 @@
   "description": "NodeJs API (retrieve prime numbers)",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node app.js"
   },
   "repository": {
@@ -25,5 +25,8 @@
   "homepage": "https://github.com/6CRISTIAN/technisys-prime-numbers#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^8.3.2"
   }
 }
