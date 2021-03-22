@@ -1,8 +1,11 @@
-import { port } from './config/config'
-import express from 'express'
-
+const { config } = require('./config/config')
+const { primeNumberRouter } = require('./routes/prime-number.routes')
+const express = require('express')
 const app = express()
 
-app.listen(port, '0.0.0.0', () => {
-	console.log(`listening at http://localhost:${port}`)
+app.use(express.json())
+app.use('/api/v1/prime-number', primeNumberRouter);
+
+app.listen(config.port, '0.0.0.0', () => {
+	console.log(`listening at http://localhost:${config.port}`)
 })
