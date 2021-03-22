@@ -1,11 +1,11 @@
 const { getPrimeNumbersByLimitNum } = require('../services/prime-number.service')
-const { defaultMsgErr } = require('../utils/constants');
+const { defaultMsgErr } = require('../utils/constants')
 
 const primeNumberController = async (req, res) => {
    try {
 
       const { limitNumber } = req.body
-      const primeNumbers = getPrimeNumbersByLimitNum(limitNumber);
+      const primeNumbers = getPrimeNumbersByLimitNum(limitNumber)
       res.status(200).json({ primeNumbers })
 
    } catch (err) {

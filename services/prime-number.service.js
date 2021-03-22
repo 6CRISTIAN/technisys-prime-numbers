@@ -20,4 +20,4 @@ const isPrimeNumber = (num) => {
    return num > 1 && num !== 4
 }
 
-module.exports = { getPrimeNumbersByLimitNum }
+module.exports = { getPrimeNumbersByLimitNum, isPrimeNumber }
